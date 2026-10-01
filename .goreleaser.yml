@@ -1,0 +1,19 @@
+version: 2
+project_name: wcdscan
+builds:
+  - id: wcdscan
+    main: ./cmd/wcdscan
+    binary: wcdscan
+    ldflags:
+      - -s -w -X main.version={{.Version}}
+    goos: [linux, darwin, windows]
+    goarch: [amd64, arm64]
+archives:
+  - formats: [tar.gz]
+    format_overrides:
+      - goos: windows
+        formats: [zip]
+checksum:
+  name_template: checksums.txt
+changelog:
+  sort: asc

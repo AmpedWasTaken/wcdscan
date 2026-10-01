@@ -1,0 +1,31 @@
+name: Bug report
+description: Report incorrect scanner behavior or a crash
+title: "[bug] "
+labels: [bug]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened?
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: wcdscan version
+      placeholder: v0.1.0
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Sanitized command
+      description: Remove cookies, tokens, private hostnames, and other secrets.
+      render: shell
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true

@@ -1,0 +1,6 @@
+/wcdscan
+/wcdscan.exe
+/reports/
+/dist/
+*.log
+.DS_Store

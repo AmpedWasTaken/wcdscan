@@ -1,0 +1,23 @@
+name: Feature request
+description: Suggest a focused improvement
+title: "[feature] "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What pentest/research workflow is currently awkward?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence model
+      description: If this affects detection, what evidence should the tool require and what false positives should be considered?
