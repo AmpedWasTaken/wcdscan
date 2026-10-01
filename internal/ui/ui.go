@@ -17,7 +17,12 @@ func PrintHuman(w io.Writer, r model.Report, quiet bool) {
 		}
 		return
 	}
-	fmt.Fprintf(w, "wcdscan %s\n", r.ToolVersion)
+
+	fmt.Fprintln(w, "┌─[ wcdscan ]────────────────────────────────────────┐")
+	fmt.Fprintf(w, "│ evidence-first cache security  //  v%-15s│\n", r.ToolVersion)
+	fmt.Fprintln(w, "└─ crafted by @AmpedWasTaken ────────────────────────┘")
+	fmt.Fprintln(w)
+
 	fmt.Fprintf(w, "Target: %s\n", r.Target)
 	fmt.Fprintf(w, "CDN:    %s\n", r.CDN)
 	if r.Proxy != "" {
@@ -41,6 +46,7 @@ func PrintHuman(w io.Writer, r model.Report, quiet bool) {
 		fmt.Fprintln(w)
 	}
 	fmt.Fprintf(w, "Summary: %d variants · %d suspicious · %d high · %d medium · %d low\n", r.Summary.TotalVariants, r.Summary.Suspicious, r.Summary.High, r.Summary.Medium, r.Summary.Low)
+	fmt.Fprintln(w, "signature: wcdscan/@AmpedWasTaken")
 }
 
 func short(s string) string {
