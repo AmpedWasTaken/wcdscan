@@ -1,5 +1,15 @@
 # wcdscan
 
+
+```text
+┌─[ wcdscan ]────────────────────────────────────────┐
+│ evidence-first cache security                      │
+└─ crafted by @AmpedWasTaken ────────────────────────┘
+```
+
+<p align="center"><sub>Built by <a href="https://github.com/AmpedWasTaken">@AmpedWasTaken</a> · offensive-security tooling with evidence-first reporting</sub></p>
+
+
 **Evidence-first Web Cache Deception scanner for pentesters and security engineers.**
 
 `wcdscan` tests whether personalized content can accidentally become retrievable from a shared cache through static-looking path variants — without dumping private response bodies and without pretending every weird cache header is a vulnerability.
